@@ -1,0 +1,19 @@
+{
+  "name": "hexo-cactus-post-last-updated",
+  "version": "1.0.0",
+  "description": "Hexo plugin to show last updated date in your posts",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "hexo",
+    "hexo plugin"
+  ],
+  "repository": "",
+  "author": "Khalaf Hosein",
+  "license": "MIT"
+}
