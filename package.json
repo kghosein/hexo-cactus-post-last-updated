@@ -13,7 +13,7 @@
     "hexo",
     "hexo plugin"
   ],
-  "repository": "",
+  "repository": "https://github.com/kghosein/hexo-cactus-post-last-updated",
   "author": "Khalaf Hosein",
   "license": "MIT"
 }
