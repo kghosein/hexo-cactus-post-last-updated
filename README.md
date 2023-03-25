@@ -22,7 +22,8 @@ When you will run plugin for the first time it will generate a ***data*** folder
 
 Notable file here is **data.json** file, it consists of the following information about each post
 
-- "filename", post name
+- "filename", post file name
+- "filePostTitle", post title
 - "fileContentInitialLength", the length of content first recorder when plugin queried your posts for the first time, it will be a constant value
 - "fileContentUpdatedLength", the length of content updated each time when you make any changes in your posts, it will be a variable value
 - "fileContentDateUpdated", date saved when a change is detected in "fileContentUpdatedLength" in yy:mm:dd format
@@ -35,6 +36,8 @@ In order to use this plugin you will need to create 2 files in your theme **last
 
 `last_updated.js` create this file `/themes/cactus/scripts/`
 ```
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
 
@@ -45,8 +48,7 @@ hexo.extend.helper.register('last_updated', function (post) {
 
   let lastUpdatedDate;
   data.map((el) => {
-    const jsonFilename = el.filename.replace(/-|\.md/g, ' ').trim();
-    if (jsonFilename == post) {
+    if (el.filePostTitle == post) {
       lastUpdatedDate = el.fileContentDateUpdated;
     }
   });
