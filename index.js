@@ -33,6 +33,11 @@ try {
           fs.writeFileSync(initialLengthsFilePath, JSON.stringify(initialLengths, null, 2));
         }
 
+        const postTitleStr = fileContent;
+        const splitTitleLine = postTitleStr.split('\n');
+        const titleLine = splitTitleLine[1];
+        const splitTitle = titleLine.split(/ (.*)/s);
+
         let fileContentDateUpdated = null;
         const dataJsonPath = path.join(__dirname, '../../data');
 
@@ -76,6 +81,7 @@ try {
 
         return {
           filename,
+          filePostTitle: splitTitle[1],
           fileContentInitialLength,
           fileContentUpdatedLength: fileContent.length,
           fileContentDateUpdated,
