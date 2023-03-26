@@ -9,6 +9,7 @@ Hexo plugin to show last updated date in your cactus theme posts.
 
 ## How To Use?
 
+In your root dir,
 ```
 npm i hexo-cactus-post-last-updated
 ```
