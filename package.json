@@ -1,6 +1,6 @@
 {
   "name": "hexo-cactus-post-last-updated",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hexo plugin to show last updated date in your posts",
   "main": "index",
   "scripts": {
